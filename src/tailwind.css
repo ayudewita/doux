@@ -1,0 +1,264 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .bg-img{ 
+        @apply bg-fixed bg-cover bg-center bg-no-repeat;   
+        background-image: url("images/slice.jpg"); 
+    }
+
+    .bg-overlay{
+        @apply h-screen;
+        background-color: rgba(0, 0, 0, .25);
+    }
+
+    .nav{
+        @apply fixed w-full z-30 text-white;
+    }
+
+    .nav.ac{
+        background-color:#b8a89b;
+    }
+
+    .nav-wrapper{
+        @apply mx-auto flex flex-wrap items-center justify-between py-2 mx-2;
+    }
+
+    .logo-wrapper{
+        @apply pl-4;
+    }
+
+    .logo-link{
+        @apply hidden pr-5 no-underline font-bold text-2xl;
+    }
+
+    .logo{
+        @apply h-10;
+    }
+
+    .search-wrapper{
+        @apply flex flex-grow w-1/2;
+    }
+
+    .transparent-search{
+        @apply w-full bg-transparent border border-white rounded-full leading-tight bg-no-repeat;
+        padding: 0.5rem 1.5rem 0.5rem 2.5rem;
+        background-image: url("images/loupe.png");
+        background-position: 14px 12px;
+        margin-left: -15px;
+
+    }
+
+    .transparent-search::placeholder{
+        color: #fff;
+    }
+
+    .transparent-search:focus{
+        outline: 0;
+        background-color: transparent;
+        border-color: #fff;        
+    }
+
+    .icon-wrapper{
+        @apply flex justify-end w-1/4;
+    }
+
+    .icon-link{
+        @apply inline-block relative;        
+        
+    }
+    
+    .icon{
+        height: 21px;
+        margin-right: 13px;
+    }
+    
+    .badge{
+        @apply -top-5 absolute rounded-full bg-red-500;
+        font-size: 9px;
+        height: 15px;
+        padding: 1px 5px 0 5px;
+        right: 4px;
+    }
+
+    .cart-tooltip, .user-tooltip{
+        @apply hidden;
+    }
+    
+
+    
+    @screen md{
+        
+        .logo-link{
+            @apply block;
+            margin-right:20px;
+            width: 134px;
+        }
+
+        .logo-a{
+            @apply flex;
+        }
+
+        .icon-wrapper{
+            @apply pr-6;
+        }
+
+        .icon-link{
+            @apply inline-block;
+        }
+
+        .icon{
+            height: 26px;
+        }
+
+        .badge{            
+            font-size: 12px;
+            height: 19px;
+            padding: 0 6px 0 6px;
+            right:6px;
+        }
+
+    }
+
+    @screen lg{
+
+        .nav-wrapper{
+            @apply px-10;
+        }
+
+        .logo-wrapper{
+            @apply w-1/4;
+        }
+
+        .logo-link{
+            @apply text-4xl;
+            width: 197px;
+        }
+
+        .logo{
+            @apply h-16;
+        }
+
+        .transparent-search{
+            @apply py-3;
+            background-position: 14px 15px;
+        }
+
+        .cart-tooltip{
+            @apply block invisible absolute text-black bg-white z-10 py-3;
+            width: 25rem;
+            border:1px solid #fff;
+            border-radius: 2px;
+            top: 177%;
+            margin-left: -361px;
+            opacity:0;
+            transition: opacity 0.3s;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+    
+        .cart-tooltip::after{
+            @apply absolute;
+            content:"";
+            bottom:100%;
+            left:91%;
+            border-style: solid;
+            border-width: 10px 14px 10px 14px;
+            border-color:rgba(0,0,0,0) rgba(0,0,0,0) #fff rgba(0,0,0,0);
+        
+        }
+          
+        .cart:hover .cart-tooltip{
+            @apply visible;
+            opacity: 1;
+        }
+    
+        .tooltip-title{
+            @apply text-gray-500 px-3;
+        }
+    
+        .tooltip-product{
+            @apply flex px-3 pt-3;
+        }
+
+        .tooltip-product:hover{
+            @apply bg-gray-200;
+            transition: all ease 0.3s;
+        }
+
+        .product-name{
+            @apply w-1/2 -mt-1 pl-2 font-semibold;
+        }
+
+        .price-wrapper{
+            @apply w-1/2 grid grid-cols-1 justify-items-end;
+        }
+
+        .price, .more-products, .tooltip-title{
+            @apply cursor-default;
+        }
+
+        .price{
+            color:#f8d846;
+        }
+
+        .text-brown{
+            color:#b8a89b;
+        }
+
+        .text-brown:hover{
+            color:#f8d846;
+        }
+
+        .more-products{
+            @apply flex justify-center;
+        }
+
+        .cart-link{
+            @apply text-center p-2;
+            
+        }
+
+        .user-tooltip{
+            @apply invisible block absolute bg-white z-10;
+            width: 8rem;
+            border:1px solid #fff;
+            border-radius: 2px;
+            top: 177%;
+            margin-left: -94px;
+            opacity:0;
+            transition: opacity 0.3s;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+    
+        .user-tooltip::after{
+            @apply absolute;
+            content:"";
+            bottom:100%;
+            left:74%;
+            border-style: solid;
+            border-width: 10px 14px 10px 14px;
+            border-color:rgba(0,0,0,0) rgba(0,0,0,0) #fff rgba(0,0,0,0);
+        
+        }
+          
+        .user:hover .user-tooltip{
+            @apply visible;
+            opacity: 1;
+        }
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
