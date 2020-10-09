@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/doux/static/css/main.5786d015.chunk.css",
+    "main.js": "/doux/static/js/main.54d74259.chunk.js",
+    "main.js.map": "/doux/static/js/main.54d74259.chunk.js.map",
+    "runtime-main.js": "/doux/static/js/runtime-main.fe40416b.js",
+    "runtime-main.js.map": "/doux/static/js/runtime-main.fe40416b.js.map",
+    "static/js/2.7c6387cd.chunk.js": "/doux/static/js/2.7c6387cd.chunk.js",
+    "static/js/2.7c6387cd.chunk.js.map": "/doux/static/js/2.7c6387cd.chunk.js.map",
+    "index.html": "/doux/index.html",
+    "precache-manifest.2c38169bd440499a0383a49c2c1fa5ea.js": "/doux/precache-manifest.2c38169bd440499a0383a49c2c1fa5ea.js",
+    "service-worker.js": "/doux/service-worker.js",
+    "static/css/main.5786d015.chunk.css.map": "/doux/static/css/main.5786d015.chunk.css.map",
+    "static/js/2.7c6387cd.chunk.js.LICENSE.txt": "/doux/static/js/2.7c6387cd.chunk.js.LICENSE.txt",
+    "static/media/cheesecake.jpg": "/doux/static/media/cheesecake.f20397ca.jpg",
+    "static/media/tailwind.output.css": "/doux/static/media/slice.e7182b92.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fe40416b.js",
+    "static/js/2.7c6387cd.chunk.js",
+    "static/css/main.5786d015.chunk.css",
+    "static/js/main.54d74259.chunk.js"
+  ]
+}
