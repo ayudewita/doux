@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import '../tailwind.output.css';
-import Logo from '../images/logo-putih3.png';
+// import Logo from '../images/logo-putih3.png';
 import CartIcon from '../images/shopping-cart.png';
 import UserIcon from '../images/user.png';
 import ChatIcon from '../images/chat.png';
@@ -31,8 +31,8 @@ function Home (){
 							<div className="logo-wrapper">
 								<div className="logo-link">
 									<a className="logo-a" href="www.d.com">
-										<img src={Logo} alt="logo" className="logo" />
-										<div>Doux</div>
+										{/* <img src={Logo} alt="logo" className="logo" /> */}
+										<div className="ft-gv">La Vie</div>
 									</a>																	
 								</div>
 							</div>		
@@ -91,72 +91,87 @@ function Home (){
 									</div>									
 								</div>
 
-								<a href="www.c.com" className="icon-link">
-									<img className="icon" src={ChatIcon} alt="" />
+								<a href="www.c.com" className="icon-link hidden">
+									<img className="icon" src={ChatIcon} alt="" title="Chat" />
 									<span className="badge">7</span>
 								</a>
 
 							</div>
+						</div>				
+					</nav>
+				
+					{/* Home */}
+
+					<div className="home">
+						<div className="home-wrapper">							
+							<div className="home-container">
+								<p className="line">Discount</p>
+								<h1 className="line2">50% OFF</h1>
+								<p className="line3">for second slice of cake</p>																	
+							</div>				
+						</div>
 					</div>
-
-				
-				</nav>
-				
-
-{/* Hero */}
-<div className="pt-24">
-
-<div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-	{/* Left Col */}
-	<div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-		<p className="uppercase tracking-loose w-full">What business are you?</p>
-		<h1 className="my-4 text-5xl font-bold leading-tight">Main Hero Message to sell yourself!</h1>
-		<p className="leading-normal text-2xl mb-8">Sub-hero message, not too long and not too short. Make it just right!</p>
-	
-		
-
-		<button className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg">Subscribe</button>
-		
-	</div>
-	{/* Right Col */}
-	<div className="w-full md:w-3/5 py-6 text-center">
-		<img className="w-full md:w-4/5 z-50" src="hero.png" alt="" />
-	</div>
-	
-</div>
-
-</div>
-
-
-
-</div>
+				</div>
 			</div>
 
-			<div className="pt-24">
+			{/* Product List */}
 
-<div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-	{/* Left Col */}
-	<div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-		<p className="uppercase tracking-loose w-full">What business are you?</p>
-		<h1 className="my-4 text-5xl font-bold leading-tight">Main Hero Message to sell yourself!</h1>
-		<p className="leading-normal text-2xl mb-8">Sub-hero message, not too long and not too short. Make it just right!</p>
-	
-		
+			<div className="w-full flex justify-center py-6">
+				<div className="mx-auto w-2/3">
+				<div className="left w-2/3">
+					<div className="top flex">
+						<div className="top-left w-1/2 flex items-center">Showing 1 - 8 of 19 results</div>
+						<div className="top-right w-1/2 flex justify-end">
+							<div className="w-3/4 px-3 mb-6 md:mb-0">								
+								<div className="relative">
+									<select className="select block appearance-none w-full border py-2 px-3 pr-8 rounded leading-tight focus:outline-none focus:bg-white" id="grid-state">
+									<option>New Mexico</option>
+									<option>Missouri</option>
+									<option>Texas</option>
+									</select>
+									<div className="dw-ar pointer-events-none absolute inset-y-0 flex items-center px-2">
+										<svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div className="bottom flex">
+						<div className="rounded-md p-3 relative">
+							<div className="h-64 w-64">
+								<img src={Cheesecake} alt="" className="rounded-t-md" />
+							</div>
+							<div className="br-clr rounded-b-md h-32 w-64 border">
+								
+							</div>
+							<div className="prod-desc text-center rounded-sm h-24 w-56 bg-white absolute">
+								<p className="ft-lr pr-nm">Strawberry Cheesecake</p>
+								<p className="pr-ds">Cake with mousey cheese texture top with strawberry jam</p>
+								<p className="prc">$13.00</p>
+							</div>	
+						</div>
+						<div className="rounded-md p-3 relative">
+							<div className="h-64 w-64">
+								<img src={Cheesecake} alt="" className="rounded-t-md" />
+							</div>
+							<div className="rounded-b-md h-32 w-64 border border-gray-400">
+								
+							</div>
+							<div className="prod-desc text-center rounded-sm h-24 w-56 bg-white absolute">
+								<p className="ft-lr pr-nm">Strawberry Cheesecake</p>
+								<p className="pr-ds">Cake with mousey cheese texture top with strawberry jam</p>
+								<p className="prc">$13.00</p>
+							</div>					
+						</div>
+					</div>
+				</div>
+				<div className="right">
 
-		<button className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg">Subscribe</button>
-		
-	</div>
-	{/* Right Col */}
-	<div className="w-full md:w-3/5 py-6 text-center">
-		<img className="w-full md:w-4/5 z-50" src="hero.png" alt="" />
-	</div>
-	
-</div>
-
-</div>
-
-
-      </div>
+				</div>
+				</div>
+				
+			</div>
+    	</div>
     );
 }
 
